@@ -102,7 +102,7 @@
                 <p class="down_button">&or;</p>
               </div><!--.first_section -->
 
-                  <p class="next"><a href="detail_2.html">Next</a></p>
+                  <p class="next"><a href="detail_2.html">></a></p>
               </div><!-- end .top-->
                   <div class="content">
                       <h2        data-300="opacity: 0" data-400="opacity: 1" class="children_title_right">"They're good kids. I had a busy life."</h2>
@@ -113,9 +113,19 @@
                       
                       
                       <div class="grid_container">
-                          <div data-1100="opacity: 0" data-1200="opacity: 1"  class="col-sm-4 block brady_bunch_text">
-                          <p>Meet The Fuller Kids</p>
-                          </div><!-- end of .brady_bunch-->   
+                          <div data-1100="opacity: 0" data-1200="opacity: 1" class="col-sm-4 block brady_bunch" onmouseover="PlaySound('mySound')" 
+                            onmouseout="StopSound('mySound')">
+                            <div class="brady_caption">
+                                <p class="brady_name">Liam, 9</p>
+                            </div><!-- end of .brady_caption-->
+                            <video class="brady_video" poster="https://s3-us-west-        2.amazonaws.com/s.cdpn.io/4273/polina.jpg" playsinline autoplay muted loop>
+                            <source muted src="img/menu_middle.m4v" type="video/webm">
+                            <source  muted src="img/menu_middle.m4v" type="video/mp4">
+                            </video>  
+                              <audio id='mySound' src='http://upload.wikimedia.org/wikipedia/commons/6/6f/Cello_Live_Performance_John_Michel_Tchaikovsky_Violin_Concerto_3rd_MVT_applaused_cut.ogg'/>   
+                            
+                            
+                          </div><!-- end of .brady_bunch-->      
                           
                           <div data-1100="opacity: 0" data-1200="opacity: 1" class="col-sm-4 block brady_bunch"></div><!-- end of .brady_bunch-->     
                           
@@ -123,7 +133,9 @@
                           
                          <div data-1300="opacity: 0" data-1400="opacity: 1" class="col-sm-4 block brady_bunch"></div><!-- end of .brady_bunch--> 
                           
-                        <div data-1300="opacity: 0" data-1400="opacity: 1" class="col-sm-4 block brady_bunch"></div><!-- end of .brady_bunch--> 
+                        <div data-1100="opacity: 0" data-1200="opacity: 1"  class="col-sm-4 block brady_bunch_text">
+                          <p>Meet The Fuller Kids</p>
+                          </div><!-- end of .brady_bunch-->  
                           
                         <div data-1300="opacity: 0" data-1400="opacity: 1" class="col-sm-4 block brady_bunch"></div><!-- end of .brady_bunch--> 
                           
