@@ -1,3 +1,19 @@
+/* press carat and page scrolls down inside pages */
+/* when scroll id is clicked, scroll animation starts from top to the start of the woodblock div  */
+$("#scroll").on("click", function(e) {
+  $("html, body").animate({
+    scrollTop: $($(this).attr("href")).offset().top
+  }, 1000);
+});
+
+/* set up incrementer of scroll down, in order to use multiple scrolls if needed. Setting the hash to a number greater than 0 will animated the scroll  */
+if ($(window.location.hash).length > 0) {
+  $("html, body").animate({
+    scrollTop: $(window.location.hash).offset().top
+  }, 1000);
+}
+
+
 /*  splash page fading in and out code taken from https://stackoverflow.com/questions/20823767/welcome-screen-before-website-loads-click-to-enter-splash-screen*/
  $('.enter_link').click(function() {
         $(this).parent().fadeOut(1000);
