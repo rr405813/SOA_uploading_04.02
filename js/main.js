@@ -13,11 +13,31 @@ if ($(window.location.hash).length > 0) {
   }, 1000);
 }
 
+/* hover over video to start playing main screen */
+
+var figure = $(".home_nav_section").hover( hoverVideo, hideVideo );
+
+function hoverVideo(e) {  
+    $('video', this).get(0).play(); 
+}
+
+function hideVideo(e) {
+    $('video', this).get(0).pause(); 
+}
+
 
 /*  splash page fading in and out code taken from https://stackoverflow.com/questions/20823767/welcome-screen-before-website-loads-click-to-enter-splash-screen*/
  $('.enter_link').click(function() {
         $(this).parent().fadeOut(1000);
  });
+
+/* hover over .home_nav_section to fade out background img to video code taken from https://css-tricks.com/snippets/jquery/fade-image-into-another-image/*/
+
+$(".home_nav_section").hover(function(){
+$(this).find("img").animate({opacity: 0}, 500);
+}, function() {
+$(this).find("img").animate({opacity: 1}, 500);
+});
 
 /* hover over menu sections audio turn on/off 
 code taken from http://jsfiddle.net/PsyWolf/W3XdA/8/ */
